@@ -1,0 +1,2528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prasadam | Chitradurga</title>
+
+<meta name="description"
+content="Prasadam, Chitradurga — South Indian, North Indian, Chinese, biryani and fast food near Ambedkar Circle.">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f8f5ef;
+    color:#24170f;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+}
+
+:root{
+    --brown:#3a1e12;
+    --brown2:#1d0f09;
+    --gold:#c58a32;
+    --gold2:#e2b765;
+    --cream:#f8f5ef;
+    --cream2:#eee5d4;
+    --red:#8d251c;
+    --green:#47652d;
+    --muted:#786d63;
+    --white:#fff;
+}
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#1d0f09;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.7s;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-inner{
+    text-align:center;
+    color:white;
+}
+
+.loader-symbol{
+    width:75px;
+    height:75px;
+    border:2px solid var(--gold2);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:30px;
+    color:var(--gold2);
+    animation:rotate 2s linear infinite;
+}
+
+.loader h2{
+    margin-top:18px;
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+}
+
+.loader p{
+    color:#b9a99a;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-top:7px;
+}
+
+@keyframes rotate{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar{
+    background:#1d0f09;
+    color:#e9c67e;
+    text-align:center;
+    padding:9px 12px;
+    font-size:10px;
+    letter-spacing:1.5px;
+}
+
+/* =========================================================
+   NAV
+========================================================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(248,245,239,.94);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(58,30,18,.12);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    min-height:72px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-circle{
+    width:44px;
+    height:44px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-family:Georgia,serif;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.logo-text strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:17px;
+}
+
+.logo-text span{
+    display:block;
+    font-size:8px;
+    letter-spacing:3px;
+    color:var(--gold);
+    margin-top:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:23px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--red);
+}
+
+.nav-call{
+    background:var(--brown);
+    color:white;
+    border-radius:10px;
+    padding:11px 14px;
+    font-size:10px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:690px;
+    position:relative;
+    overflow:hidden;
+    color:white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,11,6,.94),
+            rgba(25,11,6,.72),
+            rgba(25,11,6,.28)
+        ),
+        url("https://lh3.googleusercontent.com/sBU15DWBt2cbGQgnyB_yRrED1e2RMqpEv8AgzNr_j_kJ2cOUBenBKzE1ufDK91d39xtG92FyPRSeXV-XVjuvwm5rxAyTNHogNJpO2iTF7Q%3Dw1600-rw")
+        center/cover;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 75% 30%,rgba(226,183,101,.18),transparent 30%),
+        linear-gradient(0deg,rgba(29,15,9,.5),transparent);
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:auto;
+    min-height:690px;
+    padding:80px 20px;
+    display:flex;
+    align-items:center;
+}
+
+.hero-inner{
+    max-width:650px;
+    animation:heroIn 1s ease;
+}
+
+@keyframes heroIn{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.eyebrow{
+    color:var(--gold2);
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:clamp(48px,7vw,86px);
+    line-height:.96;
+    margin:18px 0;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    color:#eadfd3;
+    line-height:1.8;
+    font-size:14px;
+    max-width:570px;
+}
+
+.hero-rating{
+    margin-top:22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+}
+
+.stars{
+    color:#f2c75c;
+    letter-spacing:2px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:28px;
+}
+
+.btn{
+    border:0;
+    padding:14px 20px;
+    border-radius:11px;
+    font-weight:bold;
+    font-size:11px;
+    transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-gold{
+    background:linear-gradient(135deg,var(--gold2),var(--gold));
+    color:#24170f;
+    box-shadow:0 10px 30px rgba(197,138,50,.3);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.06);
+}
+
+/* =========================================================
+   FLOATING BADGES
+========================================================= */
+
+.hero-badge{
+    position:absolute;
+    right:8%;
+    bottom:12%;
+    z-index:3;
+    background:rgba(29,15,9,.86);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(226,183,101,.4);
+    padding:18px;
+    border-radius:17px;
+    width:170px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-badge strong{
+    display:block;
+    color:var(--gold2);
+    font-family:Georgia,serif;
+    font-size:22px;
+}
+
+.hero-badge span{
+    color:#cdbfb2;
+    font-size:9px;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-title small{
+    color:var(--gold);
+    letter-spacing:3px;
+    font-size:9px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin-top:9px;
+}
+
+.section-title p{
+    max-width:600px;
+    margin:10px auto 0;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:470px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    background:
+        url("https://lh3.googleusercontent.com/sBU15DWBt2cbGQgnyB_yRrED1e2RMqpEv8AgzNr_j_kJ2cOUBenBKzE1ufDK91d39xtG92FyPRSeXV-XVjuvwm5rxAyTNHogNJpO2iTF7Q%3Dw1600-rw")
+        center/cover;
+    box-shadow:0 25px 60px rgba(44,23,12,.18);
+}
+
+.about-image:after{
+    content:"";
+    position:absolute;
+    inset:15px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:18px;
+}
+
+.about-copy small{
+    color:var(--gold);
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:9px;
+}
+
+.about-copy h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin:10px 0 15px;
+}
+
+.about-copy p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.9;
+}
+
+.about-points{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+
+.about-point{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.check{
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    background:#efe4d0;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-section{
+    background:#21120b;
+    color:white;
+}
+
+.menu-section .section-title p{
+    color:#b9a99a;
+}
+
+.menu-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:35px;
+}
+
+.tab{
+    background:transparent;
+    color:#c9b9aa;
+    border:1px solid rgba(255,255,255,.12);
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:10px;
+}
+
+.tab.active{
+    background:var(--gold);
+    color:#24170f;
+    border-color:var(--gold);
+    font-weight:bold;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.menu-card{
+    background:#2c190f;
+    border:1px solid rgba(226,183,101,.13);
+    border-radius:17px;
+    padding:20px;
+    transition:.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(226,183,101,.45);
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.menu-card-top{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.menu-card h3{
+    font-family:Georgia,serif;
+    font-size:16px;
+}
+
+.menu-card p{
+    color:#ad9c8d;
+    font-size:10px;
+    line-height:1.6;
+    margin-top:7px;
+}
+
+.menu-price{
+    color:var(--gold2);
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.menu-icon{
+    font-size:25px;
+    margin-bottom:14px;
+}
+
+.menu-card .order-btn{
+    margin-top:15px;
+    background:rgba(226,183,101,.1);
+    color:var(--gold2);
+    border:1px solid rgba(226,183,101,.25);
+    border-radius:9px;
+    padding:8px 12px;
+    font-size:9px;
+}
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature{
+    background:var(--cream2);
+}
+
+.signature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.signature-card{
+    min-height:330px;
+    border-radius:22px;
+    overflow:hidden;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    transition:.4s;
+}
+
+.signature-card:hover{
+    transform:scale(1.025);
+}
+
+.signature-card:nth-child(1){
+    background-image:
+        linear-gradient(0deg,rgba(25,12,6,.75),transparent 60%),
+        url("https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=85");
+}
+
+.signature-card:nth-child(2){
+    background-image:
+        linear-gradient(0deg,rgba(25,12,6,.75),transparent 60%),
+        url("https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=85");
+}
+
+.signature-card:nth-child(3){
+    background-image:
+        linear-gradient(0deg,rgba(25,12,6,.75),transparent 60%),
+        url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85");
+}
+
+.signature-text{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    color:white;
+}
+
+.signature-text small{
+    color:var(--gold2);
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.signature-text h3{
+    font-family:Georgia,serif;
+    font-size:23px;
+    margin-top:5px;
+}
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.experience-card{
+    background:white;
+    border:1px solid #e4d9ca;
+    padding:25px 15px;
+    border-radius:17px;
+    text-align:center;
+    transition:.3s;
+}
+
+.experience-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(58,30,18,.1);
+}
+
+.experience-card strong{
+    display:block;
+    color:var(--red);
+    font-family:Georgia,serif;
+    font-size:28px;
+}
+
+.experience-card span{
+    display:block;
+    margin-top:7px;
+    color:var(--muted);
+    font-size:10px;
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews{
+    background:#fff;
+}
+
+.rating-box{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.rating-number{
+    font-family:Georgia,serif;
+    font-size:65px;
+    color:var(--brown);
+}
+
+.rating-box .stars{
+    display:block;
+    font-size:20px;
+}
+
+.rating-box p{
+    color:var(--muted);
+    font-size:10px;
+    margin-top:5px;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.review{
+    background:#faf7f1;
+    border:1px solid #eadfce;
+    padding:23px;
+    border-radius:18px;
+}
+
+.review-stars{
+    color:#d79b2c;
+    font-size:11px;
+}
+
+.review p{
+    color:#61564e;
+    font-size:11px;
+    line-height:1.8;
+    margin-top:12px;
+}
+
+.review strong{
+    display:block;
+    font-size:10px;
+    margin-top:15px;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+    background:#21120b;
+    color:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:220px 220px;
+    gap:10px;
+}
+
+.gallery-item{
+    border-radius:15px;
+    overflow:hidden;
+    background-position:center;
+    background-size:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover{
+    transform:scale(.98);
+    filter:brightness(1.15);
+}
+
+.gallery-item:nth-child(1){
+    grid-row:span 2;
+    background-image:url("https://lh3.googleusercontent.com/sBU15DWBt2cbGQgnyB_yRrED1e2RMqpEv8AgzNr_j_kJ2cOUBenBKzE1ufDK91d39xtG92FyPRSeXV-XVjuvwm5rxAyTNHogNJpO2iTF7Q%3Dw1600-rw");
+}
+
+.gallery-item:nth-child(2){
+    background-image:url("https://static.wixstatic.com/media/d0f0c8_4f5e95dd9dff4b7fb222fd842f2639c6~mv2.png/v1/fill/w_649%2Ch_648%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/d0f0c8_4f5e95dd9dff4b7fb222fd842f2639c6~mv2.png");
+}
+
+.gallery-item:nth-child(3){
+    background-image:url("https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85");
+}
+
+.gallery-item:nth-child(4){
+    background-image:url("https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=85");
+}
+
+.gallery-item:nth-child(5){
+    background-image:url("https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=85");
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    background:#f0e6d6;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+.contact-card{
+    background:white;
+    border-radius:20px;
+    padding:28px;
+}
+
+.contact-card h2{
+    font-family:Georgia,serif;
+    font-size:32px;
+}
+
+.contact-item{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+
+.contact-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:#f0e3cd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.contact-item strong{
+    display:block;
+    font-size:11px;
+}
+
+.contact-item span{
+    display:block;
+    color:var(--muted);
+    font-size:10px;
+    margin-top:3px;
+    line-height:1.6;
+}
+
+.contact-buttons{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.map{
+    border-radius:20px;
+    overflow:hidden;
+    min-height:400px;
+    background:#ddd;
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+    min-height:400px;
+    border:0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#160b06;
+    color:#9e8d7d;
+    text-align:center;
+    padding:35px 20px;
+    font-size:9px;
+    line-height:1.8;
+}
+
+footer strong{
+    color:var(--gold2);
+    font-family:Georgia,serif;
+    font-size:15px;
+}
+
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
+.float-buttons{
+    position:fixed;
+    right:16px;
+    bottom:17px;
+    z-index:900;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.float-btn{
+    width:47px;
+    height:47px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    font-size:18px;
+}
+
+.call{
+    background:var(--brown);
+}
+
+.whatsapp{
+    background:#1fa463;
+}
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:.8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .experience-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .review-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero-badge{
+        right:5%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .nav{
+        min-height:65px;
+    }
+
+    .nav-call{
+        padding:9px;
+        font-size:9px;
+    }
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text span{
+        font-size:6px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero-content{
+        min-height:650px;
+        padding:55px 18px;
+        align-items:flex-start;
+        padding-top:100px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero-badge{
+        right:15px;
+        bottom:25px;
+        width:145px;
+    }
+
+    .section{
+        padding:65px 15px;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .about-image{
+        min-height:330px;
+    }
+
+    .about-copy h2{
+        font-size:31px;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .signature-grid{
+        grid-template-columns:1fr;
+    }
+
+    .signature-card{
+        min-height:280px;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:180px 180px 180px;
+    }
+
+    .gallery-item:nth-child(1){
+        grid-row:span 2;
+    }
+
+    .contact-grid{
+        gap:15px;
+    }
+
+}
+
+/* =========================================================
+   MENU MODAL
+========================================================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(560px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#fffaf2;
+    border-radius:20px;
+    padding:25px;
+}
+
+.modal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.modal-head h2{
+    font-family:Georgia,serif;
+}
+
+.close{
+    width:35px;
+    height:35px;
+    border:0;
+    background:#eadfce;
+    border-radius:9px;
+}
+
+.order-list{
+    margin-top:15px;
+}
+
+.order-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #eadfce;
+    font-size:11px;
+}
+
+.order-total{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+    font-size:15px;
+    margin-top:15px;
+}
+
+.order-form{
+    display:grid;
+    gap:9px;
+    margin-top:15px;
+}
+
+.order-form input,
+.order-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddcfbc;
+    border-radius:9px;
+    outline:none;
+}
+
+.order-form textarea{
+    min-height:70px;
+    resize:none;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     LOADER
+===================================================== -->
+
+<div class="loader" id="loader">
+
+    <div class="loader-inner">
+
+        <div class="loader-symbol">
+            P
+        </div>
+
+        <h2>PRASADAM</h2>
+
+        <p>
+            A TASTE OF CHITRADURGA
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+<div class="topbar">
+
+    ✦ SOUTH INDIAN • NORTH INDIAN • CHINESE • BIRYANI • FAST FOOD ✦
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="nav">
+
+    <a href="#" class="logo">
+
+        <div class="logo-circle">
+            P
+        </div>
+
+        <div class="logo-text">
+
+            <strong>Prasadam</strong>
+
+            <span>CHITRADURGA</span>
+
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#menu">
+            Menu
+        </a>
+
+        <a href="#reviews">
+            Reviews
+        </a>
+
+        <a href="#gallery">
+            Gallery
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <a
+        href="tel:+919591566636"
+        class="nav-call">
+
+        ☎ Call
+
+    </a>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <div class="hero-inner">
+
+        <div class="eyebrow">
+            WELCOME TO PRASADAM
+        </div>
+
+
+        <h1>
+
+            Authentic
+            <span>Flavours.</span>
+
+            Memorable
+            Moments.
+
+        </h1>
+
+
+        <p>
+
+            A popular dining destination near Ambedkar Circle,
+            Chitradurga, serving South Indian favourites,
+            North Indian dishes, Chinese flavours, biryani,
+            fast food and special Karnataka treats.
+
+        </p>
+
+
+        <div class="hero-rating">
+
+            <span class="stars">
+                ★★★★★
+            </span>
+
+            <strong>
+                4.7
+            </strong>
+
+            <span>
+                Google rating
+            </span>
+
+        </div>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#menu"
+                class="btn btn-gold">
+
+                🍽️ Explore Menu
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn btn-outline">
+
+                📍 Find Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="hero-badge">
+
+    <strong>
+        7 AM
+    </strong>
+
+    <span>
+        OPENING TIME
+    </span>
+
+    <br><br>
+
+    <strong>
+        10:30 PM
+    </strong>
+
+    <span>
+        CLOSING TIME
+    </span>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section reveal"
+         id="about">
+
+<div class="about-grid">
+
+
+    <div class="about-image">
+    </div>
+
+
+    <div class="about-copy">
+
+        <small>
+            OUR STORY
+        </small>
+
+
+        <h2>
+            A Place For Good Food & Good Moments
+        </h2>
+
+
+        <p>
+
+            Prasadam is a restaurant located on B D Road
+            near Ambedkar Circle in Chitradurga.
+
+            The restaurant's current online menu spans
+            South Indian classics, North Indian dishes,
+            Chinese/Sichuan flavours, biryani, fast food
+            and special Karnataka dishes.
+
+        </p>
+
+
+        <div class="about-points">
+
+            <div class="about-point">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                South Indian favourites
+
+            </div>
+
+
+            <div class="about-point">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                North Indian & Chinese choices
+
+            </div>
+
+
+            <div class="about-point">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                Family dining atmosphere
+
+            </div>
+
+
+            <div class="about-point">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                Takeaway & online ordering available
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<section class="menu-section"
+         id="menu">
+
+<div class="section reveal">
+
+<div class="section-title">
+
+    <small>
+        TASTE THE DIFFERENCE
+    </small>
+
+    <h2>
+        Our Menu
+    </h2>
+
+    <p>
+        Explore some of the dishes and categories
+        currently listed for Prasadam.
+    </p>
+
+</div>
+
+
+<div class="menu-tabs">
+
+    <button
+        class="tab active"
+        onclick="filterMenu('all')">
+
+        All
+
+    </button>
+
+    <button
+        class="tab"
+        onclick="filterMenu('south')">
+
+        South Indian
+
+    </button>
+
+    <button
+        class="tab"
+        onclick="filterMenu('starter')">
+
+        Starters
+
+    </button>
+
+    <button
+        class="tab"
+        onclick="filterMenu('dosa')">
+
+        Dosa
+
+    </button>
+
+    <button
+        class="tab"
+        onclick="filterMenu('rice')">
+
+        Rice & Noodles
+
+    </button>
+
+    <button
+        class="tab"
+        onclick="filterMenu('special')">
+
+        Prasadam Special
+
+    </button>
+
+</div>
+
+
+<div class="menu-grid"
+     id="menuGrid">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SIGNATURE DISHES
+===================================================== -->
+
+<section class="section reveal">
+
+<div class="section-title">
+
+    <small>
+        CUSTOMER FAVOURITES
+    </small>
+
+    <h2>
+        Signature Choices
+    </h2>
+
+</div>
+
+
+<div class="signature-grid">
+
+    <div class="signature-card">
+
+        <div class="signature-text">
+
+            <small>
+                SOUTH INDIAN
+            </small>
+
+            <h3>
+                Ghee Masala Dosa
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="signature-card">
+
+        <div class="signature-text">
+
+            <small>
+                TRADITIONAL
+            </small>
+
+            <h3>
+                Holige with Ghee
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="signature-card">
+
+        <div class="signature-text">
+
+            <small>
+                SPECIAL STARTERS
+            </small>
+
+            <h3>
+                Crispy & Flavourful
+            </h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="section reveal">
+
+<div class="section-title">
+
+    <small>
+        THE PRASADAM EXPERIENCE
+    </small>
+
+    <h2>
+        Made For Every Occasion
+    </h2>
+
+</div>
+
+
+<div class="experience-grid">
+
+    <div class="experience-card">
+
+        <strong>
+            ☕
+        </strong>
+
+        <span>
+            Breakfast
+        </span>
+
+    </div>
+
+
+    <div class="experience-card">
+
+        <strong>
+            🍛
+        </strong>
+
+        <span>
+            Family Lunch
+        </span>
+
+    </div>
+
+
+    <div class="experience-card">
+
+        <strong>
+            👨‍👩‍👧‍👦
+        </strong>
+
+        <span>
+            Family Dining
+        </span>
+
+    </div>
+
+
+    <div class="experience-card">
+
+        <strong>
+            🥡
+        </strong>
+
+        <span>
+            Takeaway
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section class="reviews"
+         id="reviews">
+
+<div class="section reveal">
+
+<div class="section-title">
+
+    <small>
+        WHAT CUSTOMERS SAY
+    </small>
+
+    <h2>
+        Guest Reviews
+    </h2>
+
+</div>
+
+
+<div class="rating-box">
+
+    <div class="rating-number">
+        4.7
+    </div>
+
+    <span class="stars">
+        ★★★★★
+    </span>
+
+    <p>
+        Google rating • 5,900+ reviews currently shown
+    </p>
+
+</div>
+
+
+<div class="review-grid">
+
+
+    <div class="review">
+
+        <div class="review-stars">
+            ★★★★★
+        </div>
+
+        <p>
+            Review themes across public listings frequently
+            highlight the food, especially South Indian
+            favourites such as dosa, along with the overall
+            dining experience.
+        </p>
+
+        <strong>
+            Google review summary
+        </strong>
+
+    </div>
+
+
+    <div class="review">
+
+        <div class="review-stars">
+            ★★★★★
+        </div>
+
+        <p>
+            Customers frequently mention Prasadam as a
+            popular stop in Chitradurga and praise the
+            variety of dishes available.
+        </p>
+
+        <strong>
+            Customer feedback summary
+        </strong>
+
+    </div>
+
+
+    <div class="review">
+
+        <div class="review-stars">
+            ★★★★★
+        </div>
+
+        <p>
+            Public listings particularly mention masala dosa,
+            coffee, breakfast and the service experience.
+        </p>
+
+        <strong>
+            Review highlights
+        </strong>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery"
+         id="gallery">
+
+<div class="section reveal">
+
+<div class="section-title">
+
+    <small>
+        INSIDE PRASADAM
+    </small>
+
+    <h2>
+        Gallery
+    </h2>
+
+    <p>
+        A visual look at the restaurant and dining experience.
+    </p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+    <div class="gallery-item"></div>
+
+    <div class="gallery-item"></div>
+
+    <div class="gallery-item"></div>
+
+    <div class="gallery-item"></div>
+
+    <div class="gallery-item"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact"
+         id="contact">
+
+<div class="section reveal">
+
+<div class="contact-grid">
+
+
+    <div class="contact-card">
+
+        <h2>
+            Visit Prasadam
+        </h2>
+
+
+        <p style="
+            color:#786d63;
+            font-size:11px;
+            line-height:1.7;
+            margin-top:9px;
+        ">
+
+            Come enjoy your favourite food in the heart
+            of Chitradurga.
+
+        </p>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                📍
+            </div>
+
+            <div>
+
+                <strong>
+                    Address
+                </strong>
+
+                <span>
+                    B D Road, near Ambedkar Circle,
+                    Maniyur, Chitradurga,
+                    Karnataka 577501
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                ☎
+            </div>
+
+            <div>
+
+                <strong>
+                    Phone
+                </strong>
+
+                <span>
+                    +91 95915 66636
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                🕘
+            </div>
+
+            <div>
+
+                <strong>
+                    Opening Hours
+                </strong>
+
+                <span>
+                    Approximately 7:00 AM – 10:30 PM
+                    according to the current business listing.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-buttons">
+
+            <a
+                href="tel:+919591566636"
+                class="btn btn-gold">
+
+                ☎ Call
+
+            </a>
+
+
+            <a
+                href="https://wa.me/919591566636"
+                target="_blank"
+                class="btn"
+                style="
+                    background:#1fa463;
+                    color:white;
+                ">
+
+                WhatsApp
+
+            </a>
+
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Prasadam+B+D+Road+near+Ambedkar+Circle+Chitradurga"
+                target="_blank"
+                class="btn"
+                style="
+                    background:#3a1e12;
+                    color:white;
+                ">
+
+                📍 Maps
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="map">
+
+        <iframe
+            src="https://www.google.com/maps?q=Prasadam%20B%20D%20Road%20Chitradurga&output=embed"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <strong>
+        PRASADAM
+    </strong>
+
+    <br>
+
+    B D Road • Near Ambedkar Circle • Chitradurga
+
+    <br><br>
+
+    South Indian • North Indian • Chinese • Biryani • Fast Food
+
+    <br><br>
+
+    © 2026 Prasadam. Demo website created for presentation.
+
+</footer>
+
+
+<!-- =====================================================
+     FLOATING BUTTONS
+===================================================== -->
+
+<div class="float-buttons">
+
+    <a
+        href="https://wa.me/919591566636"
+        class="float-btn whatsapp"
+        target="_blank">
+
+        💬
+
+    </a>
+
+
+    <a
+        href="tel:+919591566636"
+        class="float-btn call">
+
+        ☎
+
+    </a>
+
+</div>
+
+
+<!-- =====================================================
+     ORDER MODAL
+===================================================== -->
+
+<div class="modal"
+     id="orderModal">
+
+<div class="modal-box">
+
+    <div class="modal-head">
+
+        <h2>
+            Order / Enquiry
+        </h2>
+
+        <button
+            class="close"
+            onclick="closeOrder()">
+
+            ✕
+
+        </button>
+
+    </div>
+
+
+    <div id="selectedFood"></div>
+
+
+    <div class="order-form">
+
+        <input
+            id="customerName"
+            placeholder="Your name">
+
+
+        <input
+            id="customerPhone"
+            placeholder="Mobile number"
+            type="tel">
+
+
+        <textarea
+            id="customerNote"
+            placeholder="Special request / quantity"></textarea>
+
+    </div>
+
+
+    <button
+        class="btn btn-gold"
+        style="
+            width:100%;
+            margin-top:15px;
+        "
+        onclick="sendOrder()">
+
+        📲 Send Enquiry on WhatsApp
+
+    </button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   MENU DATA
+========================================================= */
+
+const menu = [
+
+{
+    name:"Masala Dosa",
+    category:"dosa",
+    icon:"🥞",
+    description:"Classic crispy South Indian dosa with masala.",
+    price:"₹80"
+},
+
+{
+    name:"Ghee Masala Dosa",
+    category:"dosa",
+    icon:"🥞",
+    description:"Crispy dosa enriched with ghee and masala.",
+    price:"₹140"
+},
+
+{
+    name:"Ghee Podi Masala Dosa",
+    category:"dosa",
+    icon:"🌶️",
+    description:"Crispy dosa layered with aromatic podi and ghee.",
+    price:"₹150"
+},
+
+{
+    name:"Open Butter Dosa",
+    category:"dosa",
+    icon:"🧈",
+    description:"Special open dosa with a buttery touch.",
+    price:"₹140"
+},
+
+{
+    name:"Idli",
+    category:"south",
+    icon:"⚪",
+    description:"Soft steamed South Indian idli.",
+    price:"Ask"
+},
+
+{
+    name:"Idli & Vada",
+    category:"south",
+    icon:"🍽️",
+    description:"Classic idli and crispy medu vada combination.",
+    price:"Ask"
+},
+
+{
+    name:"South Indian Meal",
+    category:"south",
+    icon:"🍛",
+    description:"Traditional meal with poori, sagu, rice, rasam and more.",
+    price:"₹145"
+},
+
+{
+    name:"Crispy Corn",
+    category:"starter",
+    icon:"🌽",
+    description:"Crispy corn starter.",
+    price:"Ask"
+},
+
+{
+    name:"Paneer Ghee Roast",
+    category:"starter",
+    icon:"🧀",
+    description:"Paneer prepared with a rich ghee-roast flavour.",
+    price:"Ask"
+},
+
+{
+    name:"Mushroom Kebab",
+    category:"starter",
+    icon:"🍄",
+    description:"Flavourful mushroom starter.",
+    price:"Ask"
+},
+
+{
+    name:"Paneer Manchurian",
+    category:"starter",
+    icon:"🥘",
+    description:"Indo-Chinese paneer preparation.",
+    price:"Ask"
+},
+
+{
+    name:"Veg Fried Rice",
+    category:"rice",
+    icon:"🍚",
+    description:"Fragrant fried rice with vegetables.",
+    price:"Ask"
+},
+
+{
+    name:"Cashew Paneer Fried Rice",
+    category:"rice",
+    icon:"🍚",
+    description:"Fried rice with paneer and crunchy cashews.",
+    price:"Ask"
+},
+
+{
+    name:"Veg Hakka Noodles",
+    category:"rice",
+    icon:"🍜",
+    description:"Classic vegetable Hakka noodles.",
+    price:"Ask"
+},
+
+{
+    name:"Schezwan Noodles",
+    category:"rice",
+    icon:"🍜",
+    description:"Spicy Schezwan-style noodles.",
+    price:"Ask"
+},
+
+{
+    name:"Holige with Ghee",
+    category:"special",
+    icon:"🫓",
+    description:"Traditional Karnataka sweet prepared with ghee.",
+    price:"₹80"
+},
+
+{
+    name:"Special Holige",
+    category:"special",
+    icon:"🫓",
+    description:"Prasadam special traditional sweet.",
+    price:"₹90"
+},
+
+{
+    name:"Bili Holige",
+    category:"special",
+    icon:"🫓",
+    description:"Traditional Karnataka preparation.",
+    price:"₹130"
+}
+
+];
+
+
+/* =========================================================
+   RENDER MENU
+========================================================= */
+
+function renderMenu(category="all"){
+
+    const grid =
+        document.getElementById("menuGrid");
+
+    const list =
+        category==="all"
+        ?menu
+        :menu.filter(item=>item.category===category);
+
+
+    grid.innerHTML =
+        list.map(item=>`
+
+        <div class="menu-card">
+
+            <div class="menu-icon">
+                ${item.icon}
+            </div>
+
+            <div class="menu-card-top">
+
+                <div>
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        ${item.description}
+                    </p>
+
+                </div>
+
+                <div class="menu-price">
+                    ${item.price}
+                </div>
+
+            </div>
+
+            <button
+                class="order-btn"
+                onclick="openOrder('${item.name}')">
+
+                ORDER / ENQUIRE →
+
+            </button>
+
+        </div>
+
+        `).join("");
+
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+function filterMenu(category){
+
+    document
+        .querySelectorAll(".tab")
+        .forEach(btn=>
+            btn.classList.remove("active")
+        );
+
+
+    event.target.classList.add("active");
+
+    renderMenu(category);
+
+}
+
+
+/* =========================================================
+   ORDER MODAL
+========================================================= */
+
+let selectedDish="";
+
+
+function openOrder(dish){
+
+    selectedDish=dish;
+
+
+    document
+        .getElementById("selectedFood")
+        .innerHTML=`
+
+        <div style="
+            background:#f0e3cd;
+            padding:15px;
+            border-radius:12px;
+            font-size:12px;
+            font-weight:bold;
+        ">
+
+            Selected dish:
+            <br><br>
+
+            <span style="
+                font-family:Georgia,serif;
+                font-size:20px;
+            ">
+                ${dish}
+            </span>
+
+        </div>
+
+    `;
+
+
+    document
+        .getElementById("orderModal")
+        .classList.add("show");
+
+}
+
+
+function closeOrder(){
+
+    document
+        .getElementById("orderModal")
+        .classList.remove("show");
+
+}
+
+
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
+
+function sendOrder(){
+
+    const name =
+        document
+        .getElementById("customerName")
+        .value
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value
+        .trim();
+
+
+    const note =
+        document
+        .getElementById("customerNote")
+        .value
+        .trim();
+
+
+    if(!name || !phone){
+
+        alert(
+            "Please enter your name and mobile number."
+        );
+
+        return;
+
+    }
+
+
+    const message =
+`Hello Prasadam,
+
+I would like to enquire about:
+
+${selectedDish}
+
+Customer Name: ${name}
+Mobile: ${phone}
+
+Requirement:
+${note || "Please contact me with details."}`;
+
+
+    window.open(
+        "https://wa.me/919591566636?text="
+        +encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        entries=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target
+                        .classList
+                        .add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(el=>
+        observer.observe(el)
+    );
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document
+            .getElementById("loader")
+            .classList
+            .add("hide");
+
+    },900);
+
+    renderMenu();
+
+});
+
+</script>
+
+</body>
+          </html>
